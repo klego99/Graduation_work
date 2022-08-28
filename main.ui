@@ -21,7 +21,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="7,3">
+    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="7,0">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="90,5,0,5">
        <item>
@@ -122,12 +122,26 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
+        <widget class="QPushButton" name="btn_video_add">
+         <property name="text">
+          <string>동영상 추가</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_script_add">
+         <property name="text">
+          <string>대본 추가</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label">
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="text">
-          <string>Play List</string>
+          <string>대본</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -136,20 +150,6 @@
        </item>
        <item>
         <widget class="QListWidget" name="list"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_add">
-         <property name="text">
-          <string>Add</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_del">
-         <property name="text">
-          <string>Del</string>
-         </property>
-        </widget>
        </item>
       </layout>
      </item>

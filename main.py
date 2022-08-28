@@ -3,6 +3,8 @@ from PyQt5.QtCore import Qt, QUrl
 from PyQt5.QtGui import QPalette
 from PyQt5.uic import loadUi
 from media import CMultiMedia
+import os
+import pandas as pd
 import sys
 import datetime
 
@@ -31,8 +33,8 @@ class CWidget(QWidget):
         self.duration = ''
 
         # signal
-        self.btn_add.clicked.connect(self.clickAdd)
-        self.btn_del.clicked.connect(self.clickDel)
+        self.btn_video_add.clicked.connect(self.clickAdd)
+        self.btn_script_add.clicked.connect(self.clickDel)
         self.btn_play.clicked.connect(self.clickPlay)
         self.btn_stop.clicked.connect(self.clickStop)
         self.btn_pause.clicked.connect(self.clickPause)
@@ -51,17 +53,11 @@ class CWidget(QWidget):
 
         if files:
             cnt = len(files)
-            row = self.list.count()
-            for i in range(row, row + cnt):
-                self.list.addItem(files[i - row])
-            self.list.setCurrentRow(0)
-
             self.mp.addMedia(files)
 
     def clickDel(self):
-        row = self.list.currentRow()
-        self.list.takeItem(row)
-        self.mp.delMedia(row)
+        file_path, ext = QFileDialog.getOpenFileName(self, '파일 열기', os.getcwd(), 'excel file (*.xls *.xlsx)')
+
 
     def clickPlay(self):
         index = self.list.currentRow()

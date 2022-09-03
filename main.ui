@@ -136,6 +136,20 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="btn_push">
+         <property name="text">
+          <string>삽입</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_pull">
+         <property name="text">
+          <string>제거</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label">
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>

@@ -4,7 +4,6 @@ from PyQt5.QtGui import QPalette
 from PyQt5.uic import loadUi
 from media import CMultiMedia
 import os
-import pandas as pd
 import sys
 import datetime
 
@@ -40,6 +39,8 @@ class CWidget(QWidget):
         self.btn_pause.clicked.connect(self.clickPause)
         self.btn_forward.clicked.connect(self.clickForward)
         self.btn_prev.clicked.connect(self.clickPrev)
+        self.btn_push.clicked.connect(self)
+        self.btn_pull.clicked.connect(self)
 
         self.list.itemDoubleClicked.connect(self.dbClickList)
         self.vol.valueChanged.connect(self.volumeChanged)

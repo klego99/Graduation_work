@@ -46,6 +46,7 @@ class CWidget(QWidget):
         self.vol.valueChanged.connect(self.volumeChanged)
         self.bar.sliderMoved.connect(self.barChanged)
 
+
     def clickAdd(self):
         files, ext = QFileDialog.getOpenFileNames(self
                                                   , 'Select one or more files to open'
